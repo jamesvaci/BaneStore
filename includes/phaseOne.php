@@ -13,7 +13,7 @@
 	      <th scope="col">Cena</th>
 	    </tr>
 	  </thead>
-	  <tbody>
+	  <tbody id="theBody">
 	  <?php 
 	  $total =0;
 	  $cartQuery = "SELECT * FROM cart WHERE user_id = {$id}";
@@ -22,15 +22,16 @@
 	  	$pr_name = $row['product_name'];
 	  	$pr_id = $row['product_id'];
 	  	$pr_price = $row['pr_price'];
+
 	  	$newPr_price = number_format($pr_price, 0, '.', ' ');
 	  	$total += $pr_price;
 	  	$phaseOne = 2;
-	  	echo "<tr>";
+	  	echo "<tr id='".(rand(1,1000000))."'>";
 	  	echo "<td></td>";
 	  	echo "<td>{$pr_name}</td>";
 	  	echo "<td>1</td>";
 	  	echo "<td>{$newPr_price},00 rsd</td>";
-	  	echo "<td><a id='subtract_pr' u_id='".$id."' pr_id='".$pr_id."' pr_name='".$pr_name."' class='remove-phaseOne' href='#'><i class='material-icons'>clear</i></a></td>";
+	  	echo "<td id='".$pr_id."'><a id='subtract_pr' u_id='".$id."' pr_id='".$pr_id."' pr_name='".$pr_name."' class='remove-phaseOne' href='#'><i class='material-icons'>clear</i></a></td>";
 	  	echo "<tr>";
 	  }
 
@@ -38,7 +39,7 @@
 	      <td></td>
 	      <td></td>
 	      <td></td>
-	      <td>Ukupno: <?php echo number_format($total, 0, '.', ' ');?>,00 rsd</td>
+	      <td id="price">Ukupno: <?php echo number_format($total, 0, '.', ' ');?>,00 rsd</td>
 	    </tr>
 	  </tbody>
 	</table>
@@ -55,14 +56,19 @@
 
         $("a#subtract_pr").on("click", function(event){
           event.preventDefault();
+          var uuid = $(this).closest('tr').attr("id");
+          var idF = $(this).attr('u_id');
           var u_id = $(this).attr('u_id');
           var id = $(this).attr('pr_id');
           var name = $(this).attr('pr_name');
+          var first = "#" + uuid;
           $.ajax({
             url: "functions/remove_pr.php",
             data: 'id='+ id+'&name='+ name+'&u_id='+ u_id,
-            success: function(data){
-              console.log(data)
+            success: function(){
+              $("#totalValue").load(" #totalValue");
+              $("#price").load(" #price");
+              $(first).css("display", "none");
             }
           });
         });

@@ -83,6 +83,7 @@
             data: 'id='+ id+'&price='+ price+'&name='+ name+'&u_id='+ u_id,
             success: function(){
               $(first).load(second);
+              $("#totalValue").load(" #totalValue");
             }
           });
         });
@@ -99,6 +100,7 @@
             data: 'id='+ id+'&name='+ name+'&u_id='+ u_id,
             success: function(){
               $(first).load(second);
+              $("#totalValue").load(" #totalValue");
             }
           });
         });

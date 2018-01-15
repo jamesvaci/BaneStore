@@ -178,7 +178,7 @@ background-color: white;
 }
 
 .overlay h2, .overlay i, .overlay a, .overlay p{
-  margin: 5px;
+  margin: 0 5px;
   color: white;
   text-align: center;
 }
@@ -205,3 +205,7 @@ background-color: white;
 -moz-box-shadow: 0px 10px 17px -1px rgba(0,0,0,0.58);
 box-shadow: 0px 10px 17px -1px rgba(0,0,0,0.58);
 }
+#price{
+  padding: 0
+}
+.nav-link{padding: 0 0.5rem;}

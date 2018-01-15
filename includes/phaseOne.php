@@ -30,7 +30,7 @@
 	  	echo "<td>{$pr_name}</td>";
 	  	echo "<td>1</td>";
 	  	echo "<td>{$newPr_price},00 rsd</td>";
-	  	echo "<td><a class='remove-phaseOne' href='cart.php?product_id_subtract={$pr_id}&product_price={$pr_price}&product_name={$pr_name}&loc={$phaseOne}'><i class='material-icons'>clear</i></a></td>";
+	  	echo "<td><a id='subtract_pr' u_id='".$id."' pr_id='".$pr_id."' pr_name='".$pr_name."' class='remove-phaseOne' href='#'><i class='material-icons'>clear</i></a></td>";
 	  	echo "<tr>";
 	  }
 
@@ -49,3 +49,22 @@
 		<i class="fa fa-chevron-right" aria-hidden="true"></i>
 	</a>
 </div>
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $("a#subtract_pr").on("click", function(event){
+          event.preventDefault();
+          var u_id = $(this).attr('u_id');
+          var id = $(this).attr('pr_id');
+          var name = $(this).attr('pr_name');
+          $.ajax({
+            url: "functions/remove_pr.php",
+            data: 'id='+ id+'&name='+ name+'&u_id='+ u_id,
+            success: function(data){
+              console.log(data)
+            }
+          });
+        });
+      })
+      </script>

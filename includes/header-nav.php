@@ -167,7 +167,7 @@
         </div>
       </li>
       <li class="nav-item">
-              <a class="nav-link text-white" href="cart.php"><i class="fa fa-shopping-cart profile_icons" aria-hidden="true"></i>' . $totalProducts . '</a>
+              <a id="totalValue" class="nav-link text-white" href="cart.php"><i class="fa fa-shopping-cart profile_icons" aria-hidden="true"></i>' . $totalProducts . '</a>
             </li>
       ';
               }

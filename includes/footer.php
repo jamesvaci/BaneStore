@@ -1,40 +1,40 @@
-    <footer class="text-muted">
-    <div class="container-fluid footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-4">
-          <div>
-            <h3>Lokacije</h3>
-            <div style="display: flex;">
-            <i class="material-icons">location_on</i>
-            <p>Novi Beograd - Zemunska 22,<br> Tel.: 011 612-8-995, 011 612-8-996</p>
+    <footer class="footer text-muted">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+            <div>
+              <h3>Lokacije</h3>
+              <div style="display: flex;">
+              <i class="material-icons">location_on</i>
+              <p>Novi Beograd - Zemunska 22,<br> Tel.: 011 612-8-995, 011 612-8-996</p>
+              </div>
+              <div style="display: flex;">
+              <i class="material-icons">location_on</i>
+              <p>Subotica - Batinska 34,<br> Tel.: 024 456-1187, 456-1186</p>
+              </div>
+              <div style="display: flex;">
+              <i class="material-icons">location_on</i>
+              <p>Subotica - Banijska 2,<br> Tel.: 024 547-886</p>
+              </div>
+              <div style="display: flex;">
+              <i class="material-icons">location_on</i>
+              <p>Novi Sad - Rumenički put 11,<br> Tel.: 021 518-092</p>
+              </div>
             </div>
-            <div style="display: flex;">
-            <i class="material-icons">location_on</i>
-            <p>Subotica - Batinska 34,<br> Tel.: 024 456-1187, 456-1186</p>
             </div>
-            <div style="display: flex;">
-            <i class="material-icons">location_on</i>
-            <p>Subotica - Banijska 2,<br> Tel.: 024 547-886</p>
+            <div class="col-sm-12 col-md-4">
+              <h3>Pratite Nas</h3>
+                <a href="https://www.facebook.com/bane.enterijeri">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
             </div>
-            <div style="display: flex;">
-            <i class="material-icons">location_on</i>
-            <p>Novi Sad - Rumenički put 11,<br> Tel.: 021 518-092</p>
+            <div class="col-sm-12 col-md-4">
+              <h3>O Nama</h3>
+              <p>Kompanija Bane osnovana je 1990. godine. U početku svoga rada kompanija se bavila trgovinom i to sve do kraja 1995. god. Početkom 1996. kompanija Bane pokreće proizvodnju kupatilskog nameštaja, kuhinja po meri i opremanja kućnih i poslovnih enterijera. </p>
             </div>
-          </div>
-          </div>
-          <div class="col-sm-12 col-md-4">
-            <h3>Pratite Nas</h3>
-              <a href="https://www.facebook.com/bane.enterijeri">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-          </div>
-          <div class="col-sm-12 col-md-4">
-            <h3>O Nama</h3>
-            <p>Kompanija Bane osnovana je 1990. godine. U početku svoga rada kompanija se bavila trgovinom i to sve do kraja 1995. god. Početkom 1996. kompanija Bane pokreće proizvodnju kupatilskog nameštaja, kuhinja po meri i opremanja kućnih i poslovnih enterijera. </p>
           </div>
         </div>
-      </div>
       </div>
     </footer>
 

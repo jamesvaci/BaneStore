@@ -1,5 +1,13 @@
-html, body{
+html {
   height: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100%;
 }
 
 .flex-container {
@@ -117,7 +125,13 @@ i{
 }
 
 .footer{
-  padding: 30px;
+  position: inherit;
+  margin-top: 30px;
+  padding: 15px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 310px;
   background-color: #232323;
 }
 

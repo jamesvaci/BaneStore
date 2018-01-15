@@ -8,7 +8,7 @@
     <link rel="icon" href="https://getbootstrap.com/favicon.ico">
 <!--     <link href="addons/font-awesome.css" rel="stylesheet" type="text/css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Online Prodavnica Bane</title>
+    <title>Bane Online</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

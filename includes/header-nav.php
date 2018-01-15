@@ -1,7 +1,7 @@
   <body>
       <nav class="navbar navbar-dark bg-dark" style="background-color: #3853D8!important;">
         <div class=" collapse navbar-collapse container d-flex justify-content-between">
-          <a href="index.php" class="navbar-brand"><i class="fa fa-shopping-bag profile_icons" aria-hidden="true"></i>Prodavnica Bane</a>
+          <a href="index.php" class="navbar-brand"><i class="fa fa-shopping-bag profile_icons" aria-hidden="true"></i>Bane Online</a>
           <ul class="nav justify-content-end ">
             <li class="nav-item">
               <a class="nav-link text-white" href="kontakt.php"><i class="fa fa-map-marker profile_icons" aria-hidden="true"></i>Kontakt</a>

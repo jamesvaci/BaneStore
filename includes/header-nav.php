@@ -7,59 +7,6 @@
               <a class="nav-link text-white" href="kontakt.php"><i class="fa fa-map-marker profile_icons" aria-hidden="true"></i>Kontakt</a>
             </li>
             <?php
-            // $id = $_SESSION["id"];
-
-            // $cartQuantity = "SELECT * FROM cart WHERE user_id = {$id} ";
-
-            // $queryFinal = mysqli_query($connection, $cartQuantity);
-
-            // $num_rows = mysqli_num_rows($queryFinal);
-            
-            // $totalProducts = $num_rows;
-
-            // if (isset($_GET['product_id_add'])) {
-            //   $product_id = $_GET['product_id_add'];
-            //   $product_id = mysqli_real_escape_string($connection, $product_id);
-            //   $loc = $_GET['loc'];
-            //   $loc = mysqli_real_escape_string($connection, $loc);
-            //   $product_price = $_GET['product_price'];
-            //   $product_price = mysqli_real_escape_string($connection, $product_price);
-            //   $product_name = $_GET['product_name'];
-            //   $product_name = mysqli_real_escape_string($connection, $product_name);
-            //   $cartAdd = "INSERT INTO cart (user_id, product_id, product_name, product_quantity, pr_price) VALUES ({$id}, {$product_id}, '{$product_name}', 1, {$product_price})";
-            //   $queryAdd = mysqli_query($connection, $cartAdd);
-            //   if(!$queryAdd){
-            //     die("something went wrong" . mysqli_error($connection));
-            //   }
-            //   header("Refresh:0; prodavnica.php");
-            // }
-
-
-
-            // if (isset($_GET['product_id_subtract'])) {
-            //   $product_id = $_GET['product_id_subtract'];
-            //   $product_id = mysqli_real_escape_string($connection, $product_id);
-            //   $loc = $_GET['loc'];
-            //   $loc = mysqli_real_escape_string($connection, $loc);
-            //   $cartErase = "DELETE FROM cart ";
-            //   $cartErase .= "WHERE user_id = {$id} AND product_id = {$product_id} limit 1";
-            //   $queryErase = mysqli_query($connection, $cartErase);
-            //   if(!$queryErase){
-            //     die("something went wrong " . mysqli_error($connection));
-            //   }
-            //   switch ($loc) {
-            //     case 2:
-            //       header("Refresh:0; cart.php");
-            //       break;
-                
-            //     default:
-            //       header("Refresh:0; prodavnica.php");
-            //       break;
-            //   }
-            // }
-
-            ?>
-            <?php
 
             if (!isset($_SESSION['type'])) {
               echo '
@@ -91,50 +38,6 @@
             $num_rows = mysqli_num_rows($queryFinal);
             
             $totalProducts = $num_rows;
-
-            // Moved to AJAX add_pr
-
-            // if (isset($_GET['product_id_add'])) {
-            //   $product_id = $_GET['product_id_add'];
-            //   $product_id = mysqli_real_escape_string($connection, $product_id);
-            //   $loc = $_GET['loc'];
-            //   $loc = mysqli_real_escape_string($connection, $loc);
-            //   $product_price = $_GET['product_price'];
-            //   $product_price = mysqli_real_escape_string($connection, $product_price);
-            //   $product_name = $_GET['product_name'];
-            //   $product_name = mysqli_real_escape_string($connection, $product_name);
-            //   $cartAdd = "INSERT INTO cart (user_id, product_id, product_name, product_quantity, pr_price) VALUES ({$id}, {$product_id}, '{$product_name}', 1, {$product_price})";
-            //   $queryAdd = mysqli_query($connection, $cartAdd);
-            //   if(!$queryAdd){
-            //     die("something went wrong" . mysqli_error($connection));
-            //   }
-            //   header("Refresh:0; index.php");
-            // }
-
-
-            // Moved to AJAX remove_pr
-
-            // if (isset($_GET['product_id_subtract'])) {
-            //   $product_id = $_GET['product_id_subtract'];
-            //   $product_id = mysqli_real_escape_string($connection, $product_id);
-            //   $loc = $_GET['loc'];
-            //   $loc = mysqli_real_escape_string($connection, $loc);
-            //   $cartErase = "DELETE FROM cart ";
-            //   $cartErase .= "WHERE user_id = {$id} AND product_id = {$product_id} limit 1";
-            //   $queryErase = mysqli_query($connection, $cartErase);
-            //   if(!$queryErase){
-            //     die("something went wrong " . mysqli_error($connection));
-            //   }
-            //   switch ($loc) {
-            //     case 2:
-            //       header("Refresh:0; cart.php");
-            //       break;
-                
-            //     default:
-            //       header("Refresh:0; index.php");
-            //       break;
-            //   }
-            // }
 
             $cartQuantity = "SELECT * FROM cart WHERE user_id = {$id} ";
 

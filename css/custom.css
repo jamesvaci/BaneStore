@@ -40,13 +40,13 @@ body {
   left: 50%;
   top: 50%;
   height: 100%;
-  width: auto;
   -webkit-transform: translate(-50%,-50%);
       -ms-transform: translate(-50%,-50%);
           transform: translate(-50%,-50%);
 }
 
 .box{
+  overflow: hidden;
 	background-color: white;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.15);
   transition: box-shadow 0.3s ease-in-out;

@@ -23,8 +23,7 @@
           $pr_newPrice = $row['pr_new_price'];
           $pr_cat = $row['pr_cat'];
           $pr_img1 = $row['pr_pic1'];
-          $pr_img2 = $row['pr_pic2'];
-          $pr_img3 = $row['pr_pic3'];
+          $pr_href = $row['pr_href'];
 
           ?> 
           <div class="col-sm-12 col col-md-4 f-pr">
@@ -54,7 +53,7 @@
                       </a>';
                         }?>
                   </div>
-                  <p><?php echo $pr_desc; ?> <br> <a href="">Saznajte vise</a></p>
+                  <p><?php echo $pr_desc; ?> <br> <a href="<?php echo $pr_href; ?>">Saznajte vise</a></p>
                 </div>
               </div>
             </div>
@@ -106,17 +105,3 @@
         });
       })
       </script>
-
-
-<!--
-$.post('index.php?product_id_add='+id+'&product_price='+price+'&product_name='+name+'&loc='+loc+'', {id:id, price:price}, function(data){
-            alert('data');
-          });
-
-
-
- {
-echo '<a id="subtract_pr" pr_id="'.$pr_id.'" pr_price="'.$pr_price.'" pr_name="'.$pr_name.'" pr_loc="'.$loc.'"  class="no-style" href="index.php?product_id_subtract=' . $pr_id .'&product_price=' . $pr_price. '&product_name=' . $pr_name . '&loc=' . $loc . '"><i class="material-icons" style="margin-top: 9px;">remove_circle</i></a>
-                      <h2>' . $totalCount . '</h2>
-                      <a id="add_pr" pr_id="'.$pr_id.'" pr_price="'.$pr_price.'" pr_name="'.$pr_name.'" pr_loc="'.$loc.'" class="no-style" href="index.php?product_id_add=' . $pr_id .'&product_price=' . $pr_price . '&product_name=' . $pr_name . '&loc=' . $loc .'"><i class="material-icons" style="margin-top: 9px;">add_circle</i></a>';
-                        }?> -->

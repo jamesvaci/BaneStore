@@ -16,6 +16,8 @@
                         <li class="nav-devider"></li>
                         <li><a href="proizvodi.php">Proizvodi</a></li>
                         <li class="nav-devider"></li>
+                        <li><a href="kategorije.php">Kategorije</a></li>
+                        <li class="nav-devider"></li>
                         <li><a href="komentari.php">Komentari</a></li>
                         <li class="nav-devider"></li>
                         <li><a href="korisnici.php">Korisnici</a></li>

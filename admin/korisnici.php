@@ -28,7 +28,7 @@
 		    <?php 
 		    // View all the users
 		    while($row = mysqli_fetch_assoc($select_users)){
-		    	$user_id = $row['id'];
+		    	$user_id = $row['user_id'];
 		    	$user_name = $row['firstname'];
 		    	$user_last = $row['lastname'];
 		    	$user_email = $row['email'];

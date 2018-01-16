@@ -13,9 +13,8 @@
 		      <th scope="col">Cena</th>
 		      <th scope="col">Nova Cena</th>
 		      <th scope="col">Kategorija</th>
-		      <th scope="col">Image 1</th>
-		      <th scope="col">Image 2</th>
-		      <th scope="col">Image 3</th>
+		      <th scope="col">Slika</th>
+		      <th scope="col">Link</th>
 		    </tr>
 		  </thead>
 		  <tbody>
@@ -34,8 +33,7 @@
 		    	$pr_newPrice = $row['pr_new_price'];
 		    	$pr_cat = $row['pr_cat'];
 		    	$pr_img1 = $row['pr_pic1'];
-		    	$pr_img2 = $row['pr_pic2'];
-		    	$pr_img3 = $row['pr_pic3'];
+		    	$pr_href = $row['pr_href'];
 		    	echo "<tr>";
 		    	echo "<td>{$pr_id}</td>";
 		    	echo "<td>{$pr_name}</td>";
@@ -44,8 +42,7 @@
 		    	echo "<td>{$pr_newPrice}</td>";
 		    	echo "<td>{$pr_cat}</td>";
 		    	echo "<td><img src='../images/{$pr_img1}' style='width:100px;'></td>";
-		    	echo "<td><img src='../images/{$pr_img2}' style='width:100px;'></td>";
-		    	echo "<td><img src='../images/{$pr_img3}' style='width:100px;'></td>";
+		    	echo "<td>{$pr_href}</td>";
 		    	echo "<td><a href='proizvodi.php?delete={$pr_id}'><button class='btn btn-danger'><i class='material-icons'>delete</i></button></a></td>";
 		    	echo "<td><a href='proizvodi.php?source=edit_item&pr_id={$pr_id}'><button class='btn btn-info'><i class='material-icons'>mode_edit</i></button></a></td>";
 		    	echo "</tr>";

@@ -15,8 +15,7 @@ $id = $_GET['pr_id'];
                 $pr_newPrice = $row['pr_new_price'];
                 $pr_cat = $row['pr_cat'];
                 $pr_img1 = $row['pr_pic1'];
-                $pr_img2 = $row['pr_pic2'];
-                $pr_img3 = $row['pr_pic3'];
+                $pr_href = $row['pr_href'];
           }
 ?>
 
@@ -27,27 +26,21 @@ $id = $_GET['pr_id'];
                     $post_description = $_POST['description'];
                     $post_cena = $_POST['cena'];
                     $post_new_cena = $_POST['new_cena'];
-                    $post_kategorija = $_POST['kategorija'];
+                    $post_kategorija_id = $_POST['post_kategorija'];
+                    $post_href = $_POST['href'];
 
                     $post_image1 = $_FILES['slika1']['name'];
                     $post_image_temp1 = $_FILES['slika1']['tmp_name'];
 
-                    $post_image2 = $_FILES['slika2']['name'];
-                    $post_image_temp2 = $_FILES['slika2']['tmp_name'];
-
-                    $post_image3 = $_FILES['slika3']['name'];
-                    $post_image_temp3 = $_FILES['slika3']['tmp_name'];
-
                     move_uploaded_file($post_image_temp1, "../images/$post_image1");
-                    move_uploaded_file($post_image_temp2, "../images/$post_image2");
-                    move_uploaded_file($post_image_temp3, "../images/$post_image3");
 
                     $query = "UPDATE products SET ";
                     $query .= "pr_name = '{$post_proizvod}', ";
                     $query .= "pr_desc = '{$post_description}', ";
                     $query .= "pr_price = '{$post_cena}', ";
                     $query .= "pr_new_price = '{$post_new_cena}', ";
-                    $query .= "pr_cat = '{$post_kategorija}' ";
+                    $query .= "pr_href = '{$post_href}', ";
+                    $query .= "pr_cat = '{$post_kategorija_id}' ";
                     $query .= "WHERE pr_id = '{$pr_id}' ";
                     $update_item = mysqli_query($connection, $query);
               if(!$update_item){
@@ -69,17 +62,29 @@ $id = $_GET['pr_id'];
       <div class="form-group">
         <input type="text" class="form-control" id="cena" name="new_cena" placeholder="Cena" value="<?php echo $pr_newPrice; ?>">
       </div>
-      <div class="form-group">
-        <input type="text" class="form-control" id="kategorija" name="kategorija" placeholder="Kategorija" value="<?php echo $pr_cat; ?>">
-      </div>
+       <div class="form-group">
+        <label for="sel1">Izaberi kategoriju</label>
+        <select class="form-control" name="post_kategorija">
+        <?php 
+
+      $query = "SELECT * FROM categories ";
+      $select_cat = mysqli_query($connection, $query);
+      ?>
+        <?php 
+        // View all the users
+        while($row = mysqli_fetch_assoc($select_cat)){
+          $cat_id = $row['cat_id'];
+          $cat_name = $row['cat_name'];
+          echo "<option value='$cat_name'>{$cat_name}</option>";
+        }
+        ?>
+        </select>
+      </div> 
       <div class="form-group">
         <input type="file" class="form-control-file" id="slika1" name="slika1" placeholder="Glavna slika">
       </div>
       <div class="form-group">
-        <input type="file" class="form-control-file" id="slika2" name="slika2" placeholder="Druga slika">
-      </div>
-      <div class="form-group">
-        <input type="file" class="form-control-file" id="slika3" name="slika3" placeholder="Treca slika">
+        <input type="text" class="form-control" id="href" name="href" placeholder="Link" value="<?php echo $pr_href; ?>">
       </div>
       <button type="submit" name="update_product" class="btn btn-primary">Izmeni</button>
     </form>

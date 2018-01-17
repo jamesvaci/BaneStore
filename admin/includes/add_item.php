@@ -12,10 +12,13 @@
 
                     move_uploaded_file($post_image_temp1, "../images/$post_image1");
 
-                    $query = "INSERT INTO products (pr_name, pr_desc, pr_price, pr_cat, pr_pic1, pr_href, pr_pic3) ";
+                    $query = "INSERT INTO products (pr_name, pr_desc, pr_price, pr_cat, pr_pic1, pr_href) ";
                     $query .= "VALUES('{$post_proizvod}', '{$post_description}','{$post_cena}', '{$post_kategorija}', '{$post_image1}', '{$post_href}') ";
 
                     $create_product_query = mysqli_query($connection, $query);
+              if(!$create_product_query){
+                die('query failed' . mysqli_error($connection));
+              }
               header("Refresh:0; proizvodi.php");
                 }
 ?>

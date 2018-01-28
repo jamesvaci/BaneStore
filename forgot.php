@@ -3,7 +3,9 @@
 <?php include "includes/header-nav.php"; ?>
 <?php
 $forgot = $_GET['forgot'];
+$forgot = mysqli_real_escape_string($connection, $forgot);
 $email = $_GET['email'];
+$email = mysqli_real_escape_string($connection, $email);
 // ;
 $sql = "SELECT * FROM users WHERE forgot='{$forgot}' AND email='{$email}' ";
 
@@ -15,6 +17,7 @@ if ($count === 0) {
 
 if(isset($_POST['submit'])){
   $newPass = $_POST['password'];
+  $newPass = mysqli_real_escape_string($connection, $newPass);
   $forgotPass = password_hash($newPass, PASSWORD_BCRYPT, array('forgot' => 2));
   $query = "UPDATE users SET password='{$forgotPass}' WHERE email='{$email}' ";
       $passQuery = mysqli_query($connection, $query);
@@ -38,4 +41,3 @@ if(isset($_POST['submit'])){
         </form>
         </div>
 </div>
-<!-- $2y$10$i2fc9TlJtTWupp4ES0B4huITmO5jxH8ZgsgzuAf8w9N -->

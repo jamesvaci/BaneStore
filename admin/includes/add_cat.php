@@ -1,6 +1,7 @@
             <?php 
                 if(isset($_POST['add_cat'])){
                     $cat_name = $_POST['cat_name'];
+                    $cat_name = mysqli_real_escape_string($connection, $cat_name);
 
                     $query = "INSERT INTO categories (cat_name) ";
                     $query .= "VALUES('{$cat_name}') ";

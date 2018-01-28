@@ -12,6 +12,7 @@ if (isset($_SESSION['type'])) {
           }
 if (isset($_POST['nBg'])) {
 	$textNbg = $_POST['textNbg'];
+  $textNbg = mysqli_real_escape_string($connection, $textNbg);
 	$sender = $firstname . " " . $lastname . " - " . $email;
 	salonMail("asheton.lucan@arockee.com", $sender, $textNbg);
 	$success = "Uspesno poslata poruka";
@@ -19,6 +20,7 @@ if (isset($_POST['nBg'])) {
 
 if (isset($_POST['su'])) {
 	$textSu = $_POST['textSu'];
+  $textSu = mysqli_real_escape_string($connection, $textSu);
 	$sender = $firstname . " " . $lastname . " - " . $email;
 	salonMail("asheton.lucan@arockee.com", $sender, $textSu);
 	$success = "Uspesno poslata poruka";
@@ -26,6 +28,7 @@ if (isset($_POST['su'])) {
 
 if (isset($_POST['su2'])) {
 	$textSu2 = $_POST['textSu2'];
+  $textSu2 = mysqli_real_escape_string($connection, $textSu2);
 	$sender = $firstname . " " . $lastname . " - " . $email;
 	salonMail("asheton.lucan@arockee.com", $sender, $textSu2);
 	$success = "Uspesno poslata poruka";
@@ -33,6 +36,7 @@ if (isset($_POST['su2'])) {
 
 if (isset($_POST['ns'])) {
 	$textNs = $_POST['textNs'];
+  $textNs = mysqli_real_escape_string($connection, $textNs);
 	$sender = $firstname . " " . $lastname . " - " . $email;
 	salonMail("asheton.lucan@arockee.com", $sender, $textNs);
 	$success = "Uspesno poslata poruka";

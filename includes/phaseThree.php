@@ -40,6 +40,7 @@ $query = "SELECT * FROM users WHERE user_id = {$id}";
 if (isset($_POST['submit'])) {
 	
 	test($mail, $ime, $mesto, $broj, $narudzba);
+	header("Location: cart.php?phase=success");
 }
 ?>
 <div class="row phases">

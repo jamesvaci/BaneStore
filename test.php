@@ -1,5 +1,11 @@
 <?php
 function test($mail, $ime, $mesto, $broj, $narudzba){
+  global $connection;
+  $mail = mysqli_real_escape_string($connection, $mail);
+  $ime = mysqli_real_escape_string($connection, $ime);
+  $mesto = mysqli_real_escape_string($connection, $mesto);
+  $broj = mysqli_real_escape_string($connection, $broj);
+  $narudzba = mysqli_real_escape_string($connection, $narudzba);
 	$final = '<body style="margin: 0; padding: 0;" yahoo="fix">
   <table border="0" cellpadding="0" cellspacing="0" width="100%" background="img/billboard.jpg" bgcolor="#2a3647" style="background-image:url("img/billboard.jpg"); background-size: cover; -webkit-background-size: cover; -moz-background-size: cover -o-background-size: cover; background-position: bottom center; background-repeat: no-repeat; background-color:#2a3647;">
 
@@ -152,7 +158,7 @@ function test($mail, $ime, $mesto, $broj, $narudzba){
                   </tr>
                   <tr>
                     <td>
-                        <p style="color: #7187a7; font-family: "Raleway", Helvetica, Arial, sans-serif; font-size: 14px; line-height:24px; letter-spacing:.5px; font-weight: 400;">'.$broj.'</p>
+                        <p style="color: #7187a7; font-family: "Raleway", Helvetica, Arial, sans-serif; font-size: 14px; line-height:24px; letter-spacing:.5px; font-weight: 400;">+381 '.$broj.'</p>
                     </td>
                   </tr>
                 </table>
@@ -181,10 +187,14 @@ function test($mail, $ime, $mesto, $broj, $narudzba){
 
 
 </body>';
-mail('berra.novaly@arockee.com', 'Nova narudžba - ' . $ime, $final);
+mail('coraleigh.bonnie@arockee.com', 'Nova narudžba - ' . $ime, $final);
 }
 
 function salonMail ($salon, $sender, $messege){
+  global $connection;
+  $salon = mysqli_real_escape_string($connection, $salon);
+  $sender = mysqli_real_escape_string($connection, $sender);
+  $messege = mysqli_real_escape_string($connection, $messege);
   mail($salon, $sender, $messege);
 }
 ?>

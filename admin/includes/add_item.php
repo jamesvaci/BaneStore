@@ -1,11 +1,17 @@
             <?php 
                 if(isset($_POST['add_product'])){
                     $create_the_product = $_POST['add_product'];
+                    $create_the_product = mysqli_real_escape_string($connection, $create_the_product);
                     $post_proizvod = $_POST['proizvod'];
+                    $post_proizvod = mysqli_real_escape_string($connection, $post_proizvod);
                     $post_description = $_POST['description'];
+                    $post_description = mysqli_real_escape_string($connection, $post_description);
                     $post_cena = $_POST['cena'];
+                    $post_cena = mysqli_real_escape_string($connection, $post_cena);
                     $post_kategorija_id = $_POST['post_kategorija'];
+                    $post_kategorija = mysqli_real_escape_string($connection, $post_kategorija);
                     $post_href = $_POST['href'];
+                    $post_href = mysqli_real_escape_string($connection, $post_href);
 
                     $post_image1 = $_FILES['slika1']['name'];
                     $post_image_temp1 = $_FILES['slika1']['tmp_name'];

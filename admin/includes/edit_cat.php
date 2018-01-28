@@ -2,6 +2,7 @@
 
 if(isset($_GET['cat_id'])){
 $cat_id = $_GET['cat_id'];
+$cat_id = mysqli_real_escape_string($connection, $cat_id);
 }
 
             $query = "SELECT * FROM categories WHERE cat_id={$cat_id}";
@@ -15,7 +16,9 @@ $cat_id = $_GET['cat_id'];
              <?php 
                 if(isset($_POST['update_cat'])){
                     $update_cat = $_POST['update_cat'];
+                    $update_cat = mysqli_real_escape_string($connection, $update_cat);
                     $cat_name = $_POST['cat_name'];
+                    $cat_name = mysqli_real_escape_string($connection, $cat_name);
 
                     $query = "UPDATE categories SET ";
                     $query .= "cat_name = '{$cat_name}' ";

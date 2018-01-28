@@ -2,6 +2,7 @@
 
 if(isset($_GET['pr_id'])){
 $id = $_GET['pr_id'];
+$id = mysqli_real_escape_string($connection, $id);
 }
 
             $query = "SELECT * FROM products WHERE pr_id={$id}";
@@ -22,12 +23,19 @@ $id = $_GET['pr_id'];
              <?php 
                 if(isset($_POST['update_product'])){
                     $update_product = $_POST['update_product'];
+                    $update_product = mysqli_real_escape_string($connection, $update_product);
                     $post_proizvod = $_POST['proizvod'];
+                    $post_proizvod = mysqli_real_escape_string($connection, $post_proizvod);
                     $post_description = $_POST['description'];
+                    $post_description = mysqli_real_escape_string($connection, $post_description);
                     $post_cena = $_POST['cena'];
+                    $post_cena = mysqli_real_escape_string($connection, $post_cena);
                     $post_new_cena = $_POST['new_cena'];
+                    $post_new_cena = mysqli_real_escape_string($connection, $post_new_cena);
                     $post_kategorija_id = $_POST['post_kategorija'];
+                    $post_kategorija_id = mysqli_real_escape_string($connection, $post_kategorija_id);
                     $post_href = $_POST['href'];
+                    $post_href = mysqli_real_escape_string($connection, $post_href);
 
                     $post_image1 = $_FILES['slika1']['name'];
                     $post_image_temp1 = $_FILES['slika1']['tmp_name'];

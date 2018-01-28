@@ -4,6 +4,7 @@
 <?php
 if (isset($_POST['submit'])) {
 	$email = $_POST['email'];
+  $email = mysqli_real_escape_string($connection, $email);
 	$forgot = password_hash($email, PASSWORD_BCRYPT, array('forgotFirst' => 2));
 
 	$query = "UPDATE users SET forgot='{$forgot}' WHERE email='{$email}' ";

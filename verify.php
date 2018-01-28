@@ -2,7 +2,9 @@
 
 include('includes/db.php');
 $key = $_GET['key'];
+$key = mysqli_real_escape_string($connection, $key);
 $id = $_GET['id'];
+$id = mysqli_real_escape_string($connection, $id);
 
 $sql = "SELECT * FROM users WHERE user_id='{$id}' AND verify='{$key}' ";
 

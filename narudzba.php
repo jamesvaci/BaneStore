@@ -1,82 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml">
- <head>
-  <title>Passion - Responsive Email Template</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-  
-  <link href='http://fonts.googleapis.com/css?family=Raleway:600,700,400' rel='stylesheet' type='text/css'>
-  
-  <!--
-    **********************************************
-         Template by => http://pixelhint.com
-    **********************************************
-  -->
-  
-  <!--  General CSS  -->
-  <style type="text/css">
-    html{
-        width: 100%; 
-    }
-
-    body{
-      width: 100%;  
-      margin:0; 
-      padding:0; 
-      -webkit-font-smoothing: antialiased;
-      mso-margin-top-alt:0px; 
-      mso-margin-bottom-alt:0px; 
-      mso-padding-alt: 0px 0px 0px 0px;
-      background: #E7E7E7;
-    }
-
-    p,h1,h2,h3,h4{
-      margin-top:0;
-      margin-bottom:0;
-      padding-top:0;
-      padding-bottom:0;
-    }
-
-    table{
-      font-size: 14px;
-      border: 0;
-    }
-
-    img{
-      border: none!important;
-    }
-  </style>
-
-  <!--  Responsive CSS  -->
-  <style type="text/css">
-    @media only screen and (max-width: 800px) {
-      body[yahoo] .quote_full_width {width:100% !important;}
-      body[yahoo] .quote_content_width {width:90% !important;}
-    }
-
-    @media only screen and (max-width: 640px) {
-      body[yahoo] .full_width {width:100% !important;}
-      body[yahoo] .content_width{width:80% !important;}
-      body[yahoo] .center_txt {text-align: center!important;}
-      body[yahoo] .post_sep {width:100% !important; height:60px !important;}
-      body[yahoo] .gal_sep {width:100% !important; height:40px !important;}
-      body[yahoo] .gal_img {width:100% !important;}
-      body[yahoo] .bb_space {height:90px !important;}
-    
-    }  
-  </style>
-</head>
 <body style="margin: 0; padding: 0;" yahoo="fix">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" background="img/billboard.jpg" bgcolor="#2a3647" style="background-image:url("img/billboard.jpg"); background-size: cover; -webkit-background-size: cover; -moz-background-size: cover -o-background-size: cover; background-position: bottom center; background-repeat: no-repeat; background-color:#2a3647;">
 
-  <!--  billboard  -->
-  <table border="0" cellpadding="0" cellspacing="0" width="100%" background="img/billboard.jpg" bgcolor="#2a3647" style="background-image:url('img/billboard.jpg'); background-size: cover; -webkit-background-size: cover; -moz-background-size: cover -o-background-size: cover; background-position: bottom center; background-repeat: no-repeat; background-color:#2a3647;">
-
-    <!--  header  -->
     <tr>
       <td>
           <table width="600" cellpadding="0" cellspacing="0" align="center" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border:0; text-align:center;" class="content_width">    
-            <!--  spacing  -->
-            <!--  vertical separator  -->
             <tr>
               <td>
                 <table width="600" height="1" align="center" bgcolor="#343f53" border="0"  cellpadding="0" cellspacing="0"style="height:1px!important; width:600px; background-color:#343f53; padding:0; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
@@ -86,19 +13,12 @@
                 </table>
               </td>
             </tr>
-            <!--  end vertical separator  -->
           </table>
       </td>
     </tr>
-    <!--  end header  -->
-    
-    <!--  spacing  -->    
       <tr>
         <td height="80">&nbsp;</td>
       </tr>
-    <!--  end spacing  -->
-
-    <!--  caption  -->
     <tr>
       <td>
         <table width="600" cellpadding="0" cellspacing="0" align="center" class="content_width" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"> 
@@ -106,7 +26,7 @@
             <td>
               <table width="450" cellpadding="0" cellspacing="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="content_width" align="left">
                 <tr>
-                  <td style="color: #fff; font-family: 'Raleway', Helvetica, Arial, sans-serif; font-size: 34px; font-weight: 700; text-transform: uppercase; line-height:50px; letter-spacing:1px;">Nova narudzba</td>
+                  <td style="color: #fff; font-family: "Raleway", Helvetica, Arial, sans-serif; font-size: 34px; font-weight: 700; text-transform: uppercase; line-height:50px; letter-spacing:1px;">Nova narudzba</td>
                 </tr>
               </table>
             </td>
@@ -114,40 +34,24 @@
         </table>          
       </td>
     </tr>
-    <!--  end caption  -->
-    
-    <!--  spacing  -->    
       <tr>
         <td height="100">&nbsp;</td>
       </tr>
-    <!--  end download btn  -->   
-    
-    <!--  end spacing  -->
-  </table><!--  end billboard  -->
+  </table>
 
-  <!--  features section  -->
   <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#fbfbfb" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
-      <!--  spacing  -->
       <tr>
         <td width="100%" height="100">&nbsp;</td>
       </tr>
-      <!--  end spacing  -->
       <tr>
         <td>
           <table width="600" align="center" border="0" cellpadding="0" cellspacing="0" style="text-align:center;" class="content_width">
-            <!--  section title  -->
             <tr>
-              <td style="color: #414d5f; font-family: 'Raleway', Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 700; letter-spacing:.5px; text-transform:uppercase;">Korisnik</td>
+              <td style="color: #414d5f; font-family: "Raleway", Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 700; letter-spacing:.5px; text-transform:uppercase;">Korisnik</td>
             </tr>
-            <!--  end section title  -->
-
-            <!--  spacing  -->
             <tr>
               <td width="100%" height="20">&nbsp;</td>
             </tr>        
-            <!--  end spacing  -->
-
-            <!--  vertical separator  -->
             <tr>
               <td>
                 <table width="1" height="20" align="center" bgcolor="#e9e9e9" border="0"  cellpadding="0" cellspacing="0"style="height:20px!important; padding:0; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
@@ -157,9 +61,6 @@
                 </table>
               </td>
             </tr>
-            <!--  end vertical separator  -->
-
-            <!--  horizontal separator  -->
             <tr>
               <td>
                 <table width="100%" height="1" align="center" bgcolor="#e9e9e9" border="0"  cellpadding="0" cellspacing="0"style="padding:0;border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
@@ -169,111 +70,92 @@
                 </table>
               </td>
             </tr>
-            <!--  end horizontal separator  -->
-
-            <!--  spacing  -->
             <tr>
               <td width="100%" height="40">&nbsp;</td>
             </tr>
-            <!--  end spacing  -->
-
-            <!--  features  -->
             <tr>
               <td>
                 <table width="394" cellpadding="0" align="left" cellspacing="0"style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="full_width">
                   <tr>
                     <td>
-                      
-                      <!--  feature 1  -->
                       <table width="187" cellpadding="0" align="left" cellspacing="0"style="text-align:center; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="full_width">                          
                           <tr>
                             <td>
-                                <img src="img/icon1.png" width="140" height="140" alt="" title="" align="center" border="0" style="display: inline-block; border:0;"/>
+                                <img src="https://i.imgur.com/8XT2S6l.png" width="140" height="140" alt="" title="" align="center" border="0" style="display: inline-block; border:0;"/>
                             </td>
                           </tr>
                           <tr>
                             <td width="100%" height="20"></td>
                           </tr><tr>
-                            <td style="color: #495d79; font-family: 'Raleway', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 700;">Ime i prezime</td>
+                            <td style="color: #495d79; font-family: "Raleway", Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 700;">Ime i prezime</td>
                           </tr>
                           <tr>
                             <td width="100%" height="40"></td>
                           </tr>
                   <tr>
                     <td>
-                        <p style="color: #7187a7; font-family: 'Raleway', Helvetica, Arial, sans-serif; font-size: 14px; line-height:24px; letter-spacing:.5px; font-weight: 400;">Pera Petrovic.</p>
+                        <p style="color: #7187a7; font-family: "Raleway", Helvetica, Arial, sans-serif; font-size: 14px; line-height:24px; letter-spacing:.5px; font-weight: 400;">Pera Petrovic.</p>
                     </td>
                       </table>
-                      <!--  end feature 1  -->
-
-                      <!--  spacing  -->
                       <table height="40" align="left" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="post_sep">
                         <tr>
                           <td>&nbsp;</td>
                         </tr>
                       </table>
 
-                      <!--  feature 2  -->
                       <table width="187" cellpadding="0" align="right" cellspacing="0"style="text-align:center; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="full_width">
                         <tr>
                           <td>
-                              <img src="img/icon2.png" width="140" height="140" alt="" title="" align="center" border="0" style="display: inline-block; border:0;"/>
+                              <img src="https://i.imgur.com/cXFEaGp.png" width="140" height="140" alt="" title="" align="center" border="0" style="display: inline-block; border:0;"/>
                           </td>
                         </tr><tr>
                           <td width="100%" height="20"></td>
                         </tr>
                         <tr>
-                          <td style="color: #495d79; font-family: 'Raleway', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 700;">Mesto</td>
+                          <td style="color: #495d79; font-family: "Raleway", Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 700;">Mesto</td>
                         </tr>
                         <tr>
                           <td width="100%" height="40"></td>
                         </tr>
                   <tr>
                     <td>
-                        <p style="color: #7187a7; font-family: 'Raleway', Helvetica, Arial, sans-serif; font-size: 14px; line-height:24px; letter-spacing:.5px; font-weight: 400;">Jurija Gagarina.</p>
+                        <p style="color: #7187a7; font-family: "Raleway", Helvetica, Arial, sans-serif; font-size: 14px; line-height:24px; letter-spacing:.5px; font-weight: 400;">Jurija Gagarina.</p>
                     </td>
                   </tr>
                       </table>
-                      <!--  end feature 2  -->
 
                     </td>
                   </tr>
                 </table>
 
-                <!--  spacing  -->
                 <table height="40" align="left" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="post_sep">
                   <tr>
                     <td>&nbsp;</td>
                   </tr>
                 </table>
-                <!--  end spacing  -->
-
-                <!--  feature 3  -->
                 <table width="187" align="right" cellpadding="0" cellspacing="0"style="text-align:center; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="full_width">
                   <tr>
                     <td>
-                        <img src="img/icon3.png" width="140" height="140" alt="" title="" align="center" border="0" style="display: inline-block; border:0;"/>
+                        <img src="https://i.imgur.com/FmLobFF.png" width="140" height="140" alt="" title="" align="center" border="0" style="display: inline-block; border:0;"/>
                     </td>
                   </tr>
                   <tr>
                     <td width="100%" height="20"></td>
                   </tr>
                   <tr>
-                    <td style="color: #495d79; font-family: 'Raleway', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 700;">Broj mobilnog</td>
+                    <td style="color: #495d79; font-family: "Raleway", Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 700;">Broj mobilnog</td>
                   </tr>
                   <tr>
                     <td width="100%" height="40"></td>
                   </tr>
                   <tr>
                     <td>
-                        <p style="color: #7187a7; font-family: 'Raleway', Helvetica, Arial, sans-serif; font-size: 14px; line-height:24px; letter-spacing:.5px; font-weight: 400;">000/00 - 000 - 000.</p>
+                        <p style="color: #7187a7; font-family: "Raleway", Helvetica, Arial, sans-serif; font-size: 14px; line-height:24px; letter-spacing:.5px; font-weight: 400;">000/00 - 000 - 000.</p>
                     </td>
                   </tr>
                 </table>
-                <!--  end feature 3  -->
               </td>
             </tr>
-            <!--  end features  -->
 
           </table>
         </td>
@@ -281,7 +163,7 @@
       <tr>
         <td width="100%" height="100"></td>
       </tr>
-  </table><!--  end features section  -->
+  </table>
 <table width="100%" border="0" align="center" >
     <thead>
       <tr>
@@ -302,4 +184,3 @@
 
 
 </body>
-</html>

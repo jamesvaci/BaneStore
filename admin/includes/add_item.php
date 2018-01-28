@@ -4,7 +4,7 @@
                     $post_proizvod = $_POST['proizvod'];
                     $post_description = $_POST['description'];
                     $post_cena = $_POST['cena'];
-                    $post_kategorija = $_POST['kategorija'];
+                    $post_kategorija_id = $_POST['post_kategorija'];
                     $post_href = $_POST['href'];
 
                     $post_image1 = $_FILES['slika1']['name'];
@@ -13,7 +13,7 @@
                     move_uploaded_file($post_image_temp1, "../images/$post_image1");
 
                     $query = "INSERT INTO products (pr_name, pr_desc, pr_price, pr_cat, pr_pic1, pr_href) ";
-                    $query .= "VALUES('{$post_proizvod}', '{$post_description}','{$post_cena}', '{$post_kategorija}', '{$post_image1}', '{$post_href}') ";
+                    $query .= "VALUES('{$post_proizvod}', '{$post_description}','{$post_cena}', '{$post_kategorija_id}', '{$post_image1}', '{$post_href}') ";
 
                     $create_product_query = mysqli_query($connection, $query);
               if(!$create_product_query){
@@ -32,9 +32,24 @@
 		  <div class="form-group">
 		    <input type="text" class="form-control" id="cena" name="cena" placeholder="Cena">
 		  </div>
-		  <div class="form-group">
-		    <input type="text" class="form-control" id="kategorija" name="kategorija" placeholder="Kategorija">
-		  </div>
+	       <div class="form-group">
+	        <label for="sel1">Izaberi kategoriju</label>
+	        <select class="form-control" name="post_kategorija">
+	        <?php 
+
+	      $query = "SELECT * FROM categories ";
+	      $select_cat = mysqli_query($connection, $query);
+	      ?>
+	        <?php 
+	        // View all the users
+	        while($row = mysqli_fetch_assoc($select_cat)){
+	          $cat_id = $row['cat_id'];
+	          $cat_name = $row['cat_name'];
+	          echo "<option value='$cat_name'>{$cat_name}</option>";
+	        }
+	        ?>
+	        </select>
+	      </div> 
 		  <div class="form-group">
 		    <input type="file" class="form-control-file" id="slika1" name="slika1" placeholder="Glavna slika">
 		  </div>

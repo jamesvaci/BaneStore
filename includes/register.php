@@ -1,5 +1,3 @@
-<?php include("db.php");?>
-<?php session_start(); ?>
 <?php 
 if(isset($_POST['submit'])){
 	$firstname = $_POST['firstname'];
@@ -7,33 +5,45 @@ if(isset($_POST['submit'])){
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 
+	$verify = md5($email);
 	$lastname = mysqli_real_escape_string($connection, $lastname);
 	$firstname = mysqli_real_escape_string($connection, $firstname);
 	$email = mysqli_real_escape_string($connection, $email);
 	$password = mysqli_real_escape_string($connection, $password);
 
 	if (empty($firstname) || empty($lastname) || empty($email) || empty($password)) {
-		echo "Molimo Vas popunite sva polja";
+		$emptyFeild = "Molimo Vas popunite sva polja";
 	}else{
 	$queryE = "SELECT * FROM users WHERE email = '{$email}' ";
 	$countQuery = mysqli_query($connection, $queryE);
 	$count = mysqli_num_rows($countQuery);
 	if(!$countQuery){
+		$wrong = 'Doslo je do greske, molimo Vas da pokusate ponovo';
 		die("something went wrong" . mysqli_error($connection));
 	}else{
 	        if ($count === 0) {
 	        		$password = password_hash($password, PASSWORD_BCRYPT, array('potato' => 10));
 
-					$query = "INSERT INTO users(firstname, lastname, email, password, type) VALUES('$firstname', '$lastname','$email','$password', 'user')";
+					$query = "INSERT INTO users(firstname, lastname, email, password, type, verify, active) VALUES('$firstname', '$lastname','$email','$password', 'user', '$verify', '0')";
 					$register_user = mysqli_query($connection, $query);
 					if(!$register_user){
+						$wrong = 'Doslo je do greske, molimo Vas da pokusate ponovo';
 						die("something went wrong" . mysqli_error($connection));
 					}else{
+						$query = "SELECT * FROM users WHERE email = '{$email}' ";
+						$select_user_from_query = mysqli_query($connection, $query);
+						if(!$select_user_from_query){
+							die("something went wrong" . mysqli_error($connection));
+						}
 
-				        header("Location: ../prijavise.php");
+						while ($row = mysqli_fetch_array($select_user_from_query)) {
+							$id = $row['user_id'];
+						}
+						$successMail = 'Uspesna registracija, molimo Vas da proverite Vas email';
+						mail($email,"Registracija za BaneOnline",  "Za potvrdu registracije kliknite http://localhost:8080/BaneStore_Project/verify.php?key=" . $verify . "&id=" . $id . " Ukoliko niste zahtevali ovu verifikaciju, molimo Vas ignorisite ovaj mail");
 				    }
 	        }else{
-	        	 header("Location: ../register-f.php");
+	        	 header("Location: ./register-f.php");
 	        }
 	    }
 	}

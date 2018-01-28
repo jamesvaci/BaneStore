@@ -1,8 +1,7 @@
 <?php include "includes/header.php"; ?>
 
-<?php include "includes/header-nav.php"; ?>
+<?php include "includes/header-nav.php";?>
 <main role="main">
-
       <div class="proizvodi text-center">
         <h4>Top Proizvodi</h4>
       </div>
@@ -29,7 +28,7 @@
           <div class="col-sm-12 col col-md-4 f-pr">
               <div class="box">
                 <div class="crop">
-                  <img src="images/<?php echo $pr_img1; ?>">
+                  <img alt="<?php echo $pr_name; ?>" src="images/<?php echo $pr_img1; ?>">
                 </div>
                 <div class="product-text" style="padding: 10px;">
                 <p style="font-size: 20px; color: #232323;"><?php echo $pr_name; ?></p>
@@ -64,8 +63,10 @@
         </div>
       </div>
 
-<?php include "includes/footer.php"; ?>
     </main>
+    <div style="position: relative; top: 15px;">
+<?php include "includes/footer.php"; ?>
+</div>
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){

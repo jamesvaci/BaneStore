@@ -38,10 +38,10 @@ if(isset($_POST['submit'])){
 			$_SESSION['firstname'] = $db_firstname;
 			$_SESSION['lastname'] = $db_lastname;
 			$_SESSION['type'] = $db_type;
-			header("Location: ./admin/index.php");
+			header("Location: ./index");
 			
 		} else{
-			$fmsg = "Pogresan mail ili password, ako ste zaboravili password kliknite <a href='http://localhost:8080/BaneStore_Project/resetujlozinku.php'> ovde </a>";
+			$fmsg = "Pogresan mail ili password, ako ste zaboravili password kliknite <a href='http://banesu.rs/baneonline/resetujlozinku.php'> ovde </a>";
 		}
 		}
 	}

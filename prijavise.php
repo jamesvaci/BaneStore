@@ -1,5 +1,6 @@
 <?php include "includes/header.php"; ?>
-
+<?php error_reporting(E_ALL);
+ini_set('display_errors', 1); ?>
 <?php include "includes/header-nav.php"; ?>
 <div class='container'>
     <div class="row" style="justify-content: space-evenly; margin-top: 150px;">

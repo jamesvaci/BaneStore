@@ -39,8 +39,12 @@ if(isset($_POST['submit'])){
 						while ($row = mysqli_fetch_array($select_user_from_query)) {
 							$id = $row['user_id'];
 						}
+						$message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>  <title>Registracija</title></head><body<p>Za potvrdu registracije kliknite <a href="http://banesu.rs/baneonline/verify.php?key=' . $verify . '&id=' . $id . '">ovde</a> Ukoliko niste zahtevali ovu verifikaciju, molimo Vas ignorisite ovaj mail</p>
+						</body>
+						</html>
+						';
 						$successMail = 'Uspesna registracija, molimo Vas da proverite Vas email';
-						mail($email,"Registracija za BaneOnline",  "Za potvrdu registracije kliknite http://localhost:8080/BaneStore_Project/verify.php?key=" . $verify . "&id=" . $id . " Ukoliko niste zahtevali ovu verifikaciju, molimo Vas ignorisite ovaj mail");
+						mail($email,"Registracija za BaneOnline", $message );
 				    }
 	        }else{
 	        	 header("Location: ./register-f.php");

@@ -11,7 +11,7 @@
             if (!isset($_SESSION['type'])) {
               echo '
             <li class="nav-item">
-              <a class="nav-link text-white" href="prijavise.php"><i class="fa fa-sign-in profile_icons" aria-hidden="true"></i>Prijavi se</a>
+              <a class="nav-link text-white" href="prijavise"><i class="fa fa-sign-in profile_icons" aria-hidden="true"></i>Prijavi se</a>
             </li>';
             }
             ?>
@@ -23,7 +23,7 @@
           '. $_SESSION['firstname'].' '. $_SESSION['lastname'] .'
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="admin/index.php">Admin</a>
+          <a class="dropdown-item" href="admin/index">Admin</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="includes/logout.php">Odjavi se</a>
         </div>
@@ -64,9 +64,9 @@
           '. $firstname .' '. $lastname .'
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="userProfile.php"><i class="fa fa-user-circle-o profile_icons" aria-hidden="true"></i>Profil</a>
+          <a class="dropdown-item" href="userProfile"><i class="fa fa-user-circle-o profile_icons" aria-hidden="true"></i>Profil</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="includes/logout.php"><i class="fa fa-sign-out profile_icons" aria-hidden="true"></i>Odjavi se</a>
+          <a class="dropdown-item" href="includes/logout"><i class="fa fa-sign-out profile_icons" aria-hidden="true"></i>Odjavi se</a>
         </div>
       </li>
       <li class="nav-item">

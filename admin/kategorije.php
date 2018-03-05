@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php include "includes/head-scripts.php";?>
-
 <body class="fix-header fix-sidebar card-no-border">
         <?php include "includes/side-nav.php";?>
         <div class="container">
